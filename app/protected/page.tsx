@@ -19,7 +19,7 @@ export default async function ProtectedPage() {
 
   return (
     <>
-      <div className="flex flex-col gap-2 text-center mt-40">
+      <div className="flex flex-col gap-2 text-center">
         <h1 className="text-2xl font-bold">Good {time < 12 ? "Morning" : time < 18 ? "Afternoon" : "Evening"}, {user.email}</h1>
         <h2 className="text-lg font-medium">What would you like to do today?</h2>
 

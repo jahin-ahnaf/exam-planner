@@ -25,7 +25,7 @@ export default async function ExamsPage() {
   }
 
   return (
-    <div className="p-4 mt-40">
+    <div className="p-4">
       <h1 className="text-2xl font-bold">Exams</h1>
       <div className="block mt-5 grid gap-2">
         <CreateExam/>
