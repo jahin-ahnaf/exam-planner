@@ -51,7 +51,7 @@ export default function RootLayout({
                           Menu
                         </summary>
                         <div className="mt-2 flex flex-col gap-2 bg-zinc-800 rounded-md p-2">
-                          <a className="w-full text-center hover:text-black hover:bg-white rounded-md p-2 transition-all duration-300" href="#">Tasks</a>
+                          <Link className="w-full text-center hover:text-black hover:bg-white rounded-md p-2 transition-all duration-300" href="/protected/tasks">Tasks</Link>
                           <Link className="w-full text-center hover:text-black hover:bg-white rounded-md p-2 transition-all duration-300" href="/protected/exams">Exams</Link>
                           <a className="w-full text-center hover:text-black hover:bg-white rounded-md p-2 transition-all duration-300" href="#">Payments</a>
                         </div>
@@ -60,7 +60,7 @@ export default function RootLayout({
 
                     {/* Desktop Menu */}
                     <div className="hidden md:flex flex-wrap justify-center md:flex-nowrap items-center gap-2 font-medium w-full md:w-auto">
-                      <a className="w-full md:w-auto text-center hover:text-black hover:bg-white rounded-md p-2 transition-all duration-300" href="#">Tasks</a>
+                      <Link className="w-full md:w-auto text-center hover:text-black hover:bg-white rounded-md p-2 transition-all duration-300" href="/protected/tasks">Tasks</Link>
                       <Link className="w-full md:w-auto text-center hover:text-black hover:bg-white rounded-md p-2 transition-all duration-300" href="/protected/exams">Exams</Link>
                       <a className="w-full md:w-auto text-center hover:text-black hover:bg-white rounded-md p-2 transition-all duration-300" href="#">Payments</a>
                     </div>
@@ -70,7 +70,7 @@ export default function RootLayout({
                   </div>
                 </div>
               </nav>
-              <div className="flex flex-col gap-20 max-w-5xl p-5 mt-20">
+              <div className="flex flex-col gap-20 max-w-5xl p-5 mt-40 md:mt-20">
                 {children}
               </div>
 
