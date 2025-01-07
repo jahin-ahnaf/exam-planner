@@ -51,14 +51,14 @@ export default async function AuthButton() {
   return user ? (
     <div className="flex items-center gap-4">
       Hey, {user.email}!
-      <form action={signOutAction}>
+      <form action={signOutAction} className="ml-auto md:ml-0">
         <Button type="submit" variant={"outline"}>
           Sign out
         </Button>
       </form>
     </div>
   ) : (
-    <div className="flex gap-2">
+    <div className="flex gap-2 justify-center md:justify-start">
       <Button asChild size="sm" variant={"outline"}>
         <Link href="/sign-in">Sign in</Link>
       </Button>
