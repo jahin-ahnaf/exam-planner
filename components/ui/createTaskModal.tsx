@@ -63,10 +63,19 @@ export default function CreateTaskModal({ show, onClose }: CreateTaskModalProps)
                     <label htmlFor="task-subject">Subject</label>
                     <select id="task-subject" className="bg-zinc-700 rounded-md p-2" onChange={(e) => setTaskSubject(e.target.value)}>
                         <option value="Select Subject">Select Subject</option>
-                        <option value="Math">Math</option>
-                        <option value="Science">Science</option>
-                        <option value="History">History</option>
+                        <option value="G. Math">G. Math</option>
+                        <option value="H. Math">H. Math</option>
+                        <option value="Physics">Physics</option>
+                        <option value="Chemistry">Chemistry</option>
+                        <option value="Biology">Biology</option>
                         <option value="English">English</option>
+                        <option value="Bengali 1st">Bengali 1st</option>
+                        <option value="Bengali 2nd">Bengali 2nd</option>
+                        <option value="BGS">BGS</option>
+                        <option value="Islamic Studies">Islamic Studies</option>
+                        <option value="ICT">ICT</option>
+                        <option value="Career">Career</option>
+                        <option value="Health & Physical Education">Health & Physical Education</option>
                     </select>
                     <label htmlFor="task-teacher">Teacher</label>
                     <input type="text" id="task-teacher" className="bg-zinc-700 rounded-md p-2" onChange={(e) => setTaskTeacher(e.target.value)} />
