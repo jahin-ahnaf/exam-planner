@@ -9,6 +9,7 @@ interface Classwork {
     classworkTeacher: string;
     classworkTask: string;
     created_at: string;
+    task_type: string;
 }
 interface NoClassworksProps {
     userId?: string;
@@ -17,8 +18,8 @@ interface NoClassworksProps {
 function NoClassworks({ userId }: NoClassworksProps) {
     return (
         <div className="text-center p-8 bg-zinc-900 rounded-lg border-2 border-zinc-800">
-            <h3 className="text-xl font-semibold text-zinc-200 mb-2">No Classworks Found</h3>
-            <p className="text-zinc-400 mb-4">You haven't added any classworks yet.</p>
+            <h3 className="text-xl font-semibold text-zinc-200 mb-2">No tasks found</h3>
+            <p className="text-zinc-400 mb-4">You haven't added any tasks yet.</p>
             {userId && (
                 <p className="text-sm text-zinc-500">
                     Debug info: User ID = {userId}
@@ -64,6 +65,7 @@ export default async function ClassworkCard() {
                         <thead className="hidden md:table-header-group">
                             <tr className="text-center text-zinc-400 font-bold text-sm uppercase tracking-wider">
                                 <th className="px-4 py-2" key="date">Date</th>
+                                <th className="px-4 py-2" key="type">Type</th>
                                 <th className="px-4 py-2" key="subject">Subject</th>
                                 <th className="px-4 py-2" key="teacher">Teacher</th>
                                 <th className="px-4 py-2" key="tasks">Tasks</th>
@@ -77,6 +79,9 @@ export default async function ClassworkCard() {
                                     <tr className="md:hidden block bg-zinc-900 mb-4 p-4 rounded-lg" key={`mobile-${classwork.id}`}>
                                         <td className="block mb-2">
                                             <span className="font-bold text-zinc-400">Date:</span> {classwork.created_at.split('T')[0]}
+                                        </td>
+                                        <td className="block mb-2 font-bold">
+                                            <span className="font-bold text-zinc-400">Type:</span> {classwork.task_type}
                                         </td>
                                         <td className="block mb-2">
                                             <span className="font-bold text-zinc-400">Subject:</span> {classwork.classworkSubject}
@@ -97,7 +102,8 @@ export default async function ClassworkCard() {
                                         className="hidden md:table-row text-center hover:bg-zinc-800 transition-all duration-300"
                                         key={`desktop-${classwork.id}`}
                                     >
-                                        <td className="px-4 py-2 w-30">{classwork.created_at.split('T')[0]}</td>
+                                        <td className="px-4 py-2 w-30 text-zinc-400">{classwork.created_at.split('T')[0]}</td>
+                                        <td className={`px-4 py-2 w-20 font-bold ${classwork.task_type === 'Classwork' ? 'text-blue-500' : 'text-red-500'}`}>{classwork.task_type}</td>
                                         <td className="px-4 py-2 w-20">{classwork.classworkSubject}</td>
                                         <td className="px-4 py-2 w-20">{classwork.classworkTeacher}</td>
                                         <td className="px-4 py-2 text-left w-56">{classwork.classworkTask}</td>

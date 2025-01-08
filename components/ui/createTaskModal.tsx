@@ -29,13 +29,13 @@ export default function CreateTaskModal({ show, onClose }: CreateTaskModalProps)
             console.error("User not found");
             return;
         }
-        if (taskType === "Classwork") {
         const { data, error } = await supabase.from('classworks').insert({
             classworkSubject: taskSubject,
             classworkTask: task,
             classworkTeacher: taskTeacher,
             user_id: user.data.user.id,
             created_at: new Date().toISOString(), // Add created_at timestamp
+            task_type: taskType,
         });
 
         if (error) {
@@ -43,8 +43,7 @@ export default function CreateTaskModal({ show, onClose }: CreateTaskModalProps)
         } else {
             console.log("Task created");
             window.location.reload();
-                onClose(); // Close modal on success
-            }
+            onClose(); // Close modal on success
         }
     }
 
