@@ -34,6 +34,10 @@ export default async function Login(props: { searchParams: Promise<Message> }) {
           placeholder="Your password"
           required
         />
+        <div className="flex items-center gap-2">
+          <input className="text-sm text-foreground" type="checkbox" id="rememberMe" name="rememberMe" />
+          <label className="text-sm text-foreground" htmlFor="rememberMe">Remember me</label>
+        </div>
         <SubmitButton pendingText="Signing In..." formAction={signInAction}>
           Sign in
         </SubmitButton>

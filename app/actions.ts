@@ -13,7 +13,7 @@ export const signUpAction = async (formData: FormData) => {
 
   if (!email || !password) {
     return encodedRedirect(
-      "error",
+      "error", 
       "/sign-up",
       "Email and password are required",
     );
@@ -33,7 +33,7 @@ export const signUpAction = async (formData: FormData) => {
   } else {
     return encodedRedirect(
       "success",
-      "/sign-up",
+      "/sign-up", 
       "Thanks for signing up! Please check your email for a verification link.",
     );
   }
@@ -43,12 +43,17 @@ export const signInAction = async (formData: FormData) => {
   const email = formData.get("email") as string;
   const password = formData.get("password") as string;
   const supabase = await createClient();
+  const rememberMe = formData.get("rememberMe") === "on";
 
   const { error } = await supabase.auth.signInWithPassword({
     email,
     password,
+    options: {
+        // Remember me functionality will need to be handled differently
+        captchaToken: undefined
+    }
   });
-
+  
   if (error) {
     return encodedRedirect("error", "/sign-in", error.message);
   }
