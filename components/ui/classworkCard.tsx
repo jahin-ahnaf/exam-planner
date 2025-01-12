@@ -59,6 +59,9 @@ export default async function ClassworkCard() {
 
     return (
         <>
+        
+            {/* <Sort/> */}
+
             {classworks.length > 0 ? (
                 <div className="overflow-x-auto">
                     <table className="min-w-full border-2 border-zinc-800 rounded-md">
@@ -96,7 +99,7 @@ export default async function ClassworkCard() {
                                             <DeleteButton id={classwork.id} />
                                         </td>
                                     </tr>
-  
+
                                     {/* Desktop view */}
                                     <tr
                                         className="hidden md:table-row text-center hover:bg-zinc-800 transition-all duration-300"
@@ -120,8 +123,8 @@ export default async function ClassworkCard() {
                 <NoClassworks userId={user.id} />
             )}
 
-            <div className="absolute bottom-0 right-0">
-                <CreateTaskButton/>
+            <div className="fixed bottom-0 right-0">
+                <CreateTaskButton />
             </div>
         </>
     );
