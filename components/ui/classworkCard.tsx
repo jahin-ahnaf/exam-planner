@@ -1,6 +1,7 @@
 import { createClient } from "@/utils/supabase/server";
 import DeleteButton from "./deleteClasswork";
 import CreateTaskButton from "./createTask";
+import Sort from "./sort";
 
 interface Classwork {
     id: string;
@@ -41,7 +42,8 @@ export default async function ClassworkCard() {
         .from('classworks')
         .select('*')
         .eq('user_id', user.id)
-        .returns<Classwork[]>();
+        .returns<Classwork[]>()
+        .order('created_at', { ascending: false });
 
     // Debug logging for the query results
     console.log("Fetched classworks:", classworks);
