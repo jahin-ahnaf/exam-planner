@@ -43,24 +43,24 @@ export default function RootLayout({
                 <div className="w-full max-w-5xl flex flex-col md:flex-row justify-between items-center p-3 px-5 text-sm">
                   <div className="flex flex-col md:flex-row gap-5 items-center font-semibold w-full md:w-auto">
                     <Link href={"/"} className="text-lg mb-2 md:mb-0 hover:text-blue-400 transition-colors">Study Planner</Link>
-                    
+
                     {/* Mobile Menu */}
                     <div className="md:hidden w-full">
                       <details className="w-full group">
                         <summary className="list-none bg-zinc-800/30 backdrop-blur-md p-3 rounded-lg text-center cursor-pointer hover:bg-zinc-700/30 transition-all duration-300 flex items-center justify-center gap-2">
                           Menu
-                          <svg 
-                            className="w-4 h-4 transition-transform duration-300 group-open:rotate-180" 
-                            fill="none" 
-                            stroke="currentColor" 
+                          <svg
+                            className="w-4 h-4 transition-transform duration-300 group-open:rotate-180"
+                            fill="none"
+                            stroke="currentColor"
                             viewBox="0 0 24 24"
                           >
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                           </svg>
                         </summary>
                         <div className="absolute left-0 right-0 mt-2 mx-4 flex flex-col gap-2 bg-zinc-800/95 backdrop-blur-xl rounded-lg p-3 shadow-lg border border-zinc-700/50 transition-all duration-300 ease-in-out transform origin-top group-open:translate-y-0 group-open:opacity-100 group-open:scale-100 group-closed:translate-y-[-10px] group-closed:opacity-0 group-closed:scale-95 group-closed:pointer-events-none">
-                          <Link 
-                            className="w-full text-center hover:text-black hover:bg-white/90 rounded-md p-3 transition-all duration-300 flex items-center justify-center gap-2" 
+                          <Link
+                            className="w-full text-center hover:text-black hover:bg-white/90 rounded-md p-3 transition-all duration-300 flex items-center justify-center gap-2"
                             href="/protected/tasks"
                           >
                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -68,8 +68,8 @@ export default function RootLayout({
                             </svg>
                             Tasks
                           </Link>
-                          <Link 
-                            className="w-full text-center hover:text-black hover:bg-white/90 rounded-md p-3 transition-all duration-300 flex items-center justify-center gap-2" 
+                          <Link
+                            className="w-full text-center hover:text-black hover:bg-white/90 rounded-md p-3 transition-all duration-300 flex items-center justify-center gap-2"
                             href="/protected/exams"
                           >
                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -77,8 +77,8 @@ export default function RootLayout({
                             </svg>
                             Exams
                           </Link>
-                          <a 
-                            className="w-full text-center hover:text-black hover:bg-white/90 rounded-md p-3 transition-all duration-300 flex items-center justify-center gap-2" 
+                          <a
+                            className="w-full text-center hover:text-black hover:bg-white/90 rounded-md p-3 transition-all duration-300 flex items-center justify-center gap-2"
                             href="#"
                           >
                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -110,6 +110,9 @@ export default function RootLayout({
               </div>
 
               <footer className="w-full flex items-center justify-center border-t mx-auto text-center text-xs gap-8 py-16">
+                <div>
+                  <a className="text-md hover:text-lg transition-all duration-300 cursor-pointer" target="_blank" href="https://github.com/jahin-ahnaf/exam-planner">Wanna contribute?</a>
+                </div>
                 <p>
                   Powered by{" "}
                   <a
