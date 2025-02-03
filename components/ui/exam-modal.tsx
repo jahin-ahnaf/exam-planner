@@ -76,17 +76,23 @@ export default function ExamModal({ show, onClose }: ExamModalProps) {
                     <select id="exam-subject" className="bg-zinc-700 rounded-md p-2" onChange={(e) => setExamSubject(e.target.value)}>
                         <option value="Select Subject">Select Subject</option>
                         <option value="Math">Math</option>
-                        <option value="Science">Science</option>
-                        <option value="History">History</option>
+                        <option value="Higher Math">Higher Math</option>
+                        <option value="Science">Physics</option>
+                        <option value="History">Chemistry</option>
+                        <option value="Biology">Biology</option>
                         <option value="English">English</option>
+                        <option value="Bangla">Bangla</option>
                     </select>
                     <label htmlFor="exam-type">Exam Type</label>
                     <select id="exam-type" className="bg-zinc-700 rounded-md p-2" onChange={(e) => setExamType(e.target.value)}>
                         <option value="Select Exam Type">Select Exam Type</option>
                         <option value="Quiz">Quiz</option>
+                        <option value="CT">CT</option>
+                        <option value="Model Test">Model Test</option>
                         <option value="Assignment">Assignment</option>
-                        <option value="Midterm">Midterm</option>
-                        <option value="Final">Final</option>
+                        <option value="Practical">Practical</option>
+                        <option value="Pre-Test">Pre-Test</option>
+                        <option value="Test">Test</option>
                     </select>
                     <label htmlFor="exam-marks">Exam Marks</label>
                     <input type="number" id="exam-marks" className="bg-zinc-700 rounded-md p-2" onChange={(e) => setExamMarks(Number(e.target.value))} />
