@@ -42,12 +42,15 @@ export default function RootLayout({
               <nav className="w-full flex justify-center border-b border-b-foreground/10 h-16 fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md">
                 <div className="w-full max-w-5xl flex flex-col md:flex-row justify-between items-center p-3 px-5 text-sm">
                   <div className="flex flex-col md:flex-row gap-5 items-center font-semibold w-full md:w-auto">
-                    <Link href={"/"} className="text-lg mb-2 md:mb-0 hover:text-blue-400 transition-colors">Study Planner</Link>
+                    <Link href={"/"} className="text-lg mb-2 md:mb-0 hover:text-blue-400 transition-colors invisible md:visible">Study Planner</Link>
 
                     {/* Mobile Menu */}
-                    <div className="md:hidden w-full">
+                    <div className="md:hidden w-full fixed">
                       <details className="w-full group">
-                        <summary className="list-none bg-zinc-800/30 backdrop-blur-md p-3 rounded-lg text-center cursor-pointer hover:bg-zinc-700/30 transition-all duration-300 flex items-center justify-center gap-2">
+                        
+                        <summary className="list-none bg-zinc-100 dark:bg-zinc-800/30 backdrop-blur-md p-3 rounded-lg text-center cursor-pointer hover:bg-zinc-200 dark:hover:bg-zinc-700/30 transition-all duration-300 flex items-center justify-between gap-2">
+                        <h2 className="text-black ml-5 dark:text-white">Study Planner</h2>
+                        <div className="flex items-center gap-1 mr-5">
                           Menu
                           <svg
                             className="w-4 h-4 transition-transform duration-300 group-open:rotate-180"
@@ -57,8 +60,9 @@ export default function RootLayout({
                           >
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                           </svg>
+                          </div>
                         </summary>
-                        <div className="absolute left-0 right-0 mt-2 mx-4 flex flex-col gap-2 bg-zinc-800/95 backdrop-blur-xl rounded-lg p-3 shadow-lg border border-zinc-700/50 transition-all duration-300 ease-in-out transform origin-top group-open:translate-y-0 group-open:opacity-100 group-open:scale-100 group-closed:translate-y-[-10px] group-closed:opacity-0 group-closed:scale-95 group-closed:pointer-events-none">
+                        <div className="absolute left-10 right-10 mt-10 mx-4 flex flex-col gap-2 bg-zinc-200 dark:bg-zinc-800/95 backdrop-blur-xl rounded-lg p-3 shadow-lg border border-zinc-700/50 transition-all duration-300 ease-in-out transform origin-top group-open:translate-y-0 group-open:opacity-100 group-open:scale-100 group-closed:translate-y-[-10px] group-closed:opacity-0 group-closed:scale-95 group-closed:pointer-events-none">
                           <Link
                             className="w-full text-center hover:text-black hover:bg-white/90 rounded-md p-3 transition-all duration-300 flex items-center justify-center gap-2"
                             href="/protected/tasks"
@@ -95,9 +99,9 @@ export default function RootLayout({
 
                     {/* Desktop Menu */}
                     <div className="hidden md:flex flex-wrap justify-center md:flex-nowrap items-center gap-2 font-medium w-full md:w-auto">
-                      <Link className="w-full md:w-auto text-center hover:text-black hover:bg-white rounded-md p-2 transition-all duration-300" href="/protected/tasks">Tasks</Link>
-                      <Link className="w-full md:w-auto text-center hover:text-black hover:bg-white rounded-md p-2 transition-all duration-300" href="/protected/exams">Exams</Link>
-                      <a className="w-full md:w-auto text-center hover:text-black hover:bg-white rounded-md p-2 transition-all duration-300" href="#">Payments</a>
+                      <Link className="w-full md:w-auto text-center hover:bg-zinc-200 dark:hover:text-black hover:bg-zinc-200 dark:hover:bg-white rounded-md p-2 transition-all duration-300" href="/protected/tasks">Tasks</Link>
+                      <Link className="w-full md:w-auto text-center hover:bg-zinc-200 dark:hover:text-black hover:bg-zinc-200 dark:hover:bg-white rounded-md p-2 transition-all duration-300" href="/protected/exams">Exams</Link>
+                      <a className="w-full md:w-auto text-center hover:bg-zinc-200 dark:hover:text-black hover:bg-zinc-200 dark:hover:bg-white rounded-md p-2 transition-all duration-300" href="#">Payments</a>
                     </div>
                   </div>
                   <div className="mt-2 md:mt-0 hidden md:block">
