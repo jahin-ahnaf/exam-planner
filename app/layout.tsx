@@ -49,7 +49,7 @@ export default function RootLayout({
                       <details className="w-full group">
                         
                         <summary className="list-none bg-zinc-100 dark:bg-zinc-800/30 backdrop-blur-md p-3 rounded-lg text-center cursor-pointer hover:bg-zinc-200 dark:hover:bg-zinc-700/30 transition-all duration-300 flex items-center justify-between gap-2">
-                        <h2 className="text-black ml-5 dark:text-white">Study Planner</h2>
+                        <h2 className="text-black ml-5 dark:text-white"><a href={"/"}>Study Planner</a></h2>
                         <div className="flex items-center gap-1 mr-5">
                           Menu
                           <svg
@@ -62,7 +62,7 @@ export default function RootLayout({
                           </svg>
                           </div>
                         </summary>
-                        <div className="absolute left-10 right-10 mt-10 mx-4 flex flex-col gap-2 bg-zinc-200 dark:bg-zinc-800/95 backdrop-blur-xl rounded-lg p-3 shadow-lg border border-zinc-700/50 transition-all duration-300 ease-in-out transform origin-top group-open:translate-y-0 group-open:opacity-100 group-open:scale-100 group-closed:translate-y-[-10px] group-closed:opacity-0 group-closed:scale-95 group-closed:pointer-events-none">
+                        <div className="absolute right-0 mt-5 mx-4 flex flex-col gap-2 bg-zinc-200 dark:bg-zinc-800/95 backdrop-blur-xl rounded-lg p-3 shadow-lg border border-zinc-700/50 transition-all duration-300 ease-in-out transform origin-top group-open:translate-y-0 group-open:opacity-100 group-open:scale-100 group-closed:translate-y-[-10px] group-closed:opacity-0 group-closed:scale-95 group-closed:pointer-events-none">
                           <Link
                             className="w-full text-center hover:text-black hover:bg-white/90 rounded-md p-3 transition-all duration-300 flex items-center justify-center gap-2"
                             href="/protected/tasks"
